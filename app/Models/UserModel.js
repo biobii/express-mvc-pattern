@@ -1,14 +1,19 @@
 const Model = require('@models/Model')
 
 class UserModel extends Model {
-  async get(limit = 2) {
-    console.log('limit: ' , limit)
-    // return await this.DB.select().from('users')
+
+  async get() {
+    return await this.DB('users')
   }
 
-  async create(user) {
-    return await this.DB.insert(user).into('users')
+  async save(req) {
+    //
   }
+
+  async find(email) {
+    return await this.DB('users').where('email', email).first()
+  }
+  
 }
 
 module.exports = new UserModel

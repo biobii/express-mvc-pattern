@@ -1,4 +1,5 @@
 class Model {
+
   constructor() {
     this.DB = require('knex')({
       client: process.env.DB_DRIVER,
@@ -10,6 +11,7 @@ class Model {
       }
     })
   }
+  
 }
 
 module.exports = Model

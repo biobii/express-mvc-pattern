@@ -40,6 +40,7 @@
   },
   "_moduleAliases": {
     "App": "app",
+    "@config": "config",
     "@controllers": "app/Http/Controllers",
     "@middleware": "app/Http/Middleware",
     "@models": "app/Models",
